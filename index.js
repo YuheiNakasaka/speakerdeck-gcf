@@ -7,7 +7,7 @@ const cors = require('cors')({origin: true});
 exports.getSpeakerdeckThumb = (req, res) => {
   const url = req.body.url;
 
-  if (url === undefined || url.length === 0) {
+  if (req.method === "POST" && (url === undefined || url.length === 0)) {
     res.send(JSON.stringify({status: 'fail'}));
   }
 
