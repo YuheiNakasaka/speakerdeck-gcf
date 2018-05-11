@@ -21,7 +21,7 @@ exports.getSpeakerdeckThumb = (req, res) => {
       const imgUrl = $('meta[property="og:image"]').attr('content');
       const uid = imgUrl.match(/https:\/\/speakerd\.s3\.amazonaws\.com\/presentations\/(.+?)\//)[1];
       const orgThumb = "https://speakerd.s3.amazonaws.com/presentations/" + uid + "/slide_0.jpg";
-      const miniThumb = "https://speakerd.s3.amazonaws.com/presentations/" + uid + "/slide_0.jpg";
+      const miniThumb = "https://speakerd.s3.amazonaws.com/presentations/" + uid + "/thumb_slide_0.jpg";
       const resp = {
         orgThumb: orgThumb,
         miniThumb: miniThumb,
