@@ -1,4 +1,4 @@
-# mysandbox
+# speakerdeck-gcf
 
 Cloud Functions to avoid CORS of Speakerdeck.
 
