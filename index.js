@@ -11,6 +11,9 @@ exports.getSpeakerdeckThumb = (req, res) => {
     res.send(JSON.stringify({status: 'fail'}));
   }
 
+  // レスポンスをCDNにキャッシュ
+  res.set('Cache-Control', 'public, max-age=300, s-maxage=600');
+
   // CORSを許可する
   cors(req, res, () => {
     request(url, (error, response, body) => {
